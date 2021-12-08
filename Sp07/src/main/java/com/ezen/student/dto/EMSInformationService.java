@@ -23,6 +23,7 @@ public class EMSInformationService {
 	public void outputEMSInformation() {
 		System.out.print("\n\n");
 		String devPeriod=sYear+"/"+sMonth+"/"+sDay+"~"+eYear+"/"+eMonth+"/"+eDay;
+		System.out.println(info+"("+devPeriod+")"+"\n"+copyRight+"\n"+ver);
 		System.out.println("Developers : " + developers);
 		System.out.println("Administrator : " + administrators);
 		outputDataBaseInfo(); //위 메서드 호출

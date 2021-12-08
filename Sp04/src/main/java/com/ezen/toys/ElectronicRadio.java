@@ -3,7 +3,6 @@ package com.ezen.toys;
 import com.ezen.bettery.Battery;
 
 public class ElectronicRadio {
-	
 	private Battery bat;
 	
 	public ElectronicRadio(Battery bat) {
@@ -13,5 +12,5 @@ public class ElectronicRadio {
 	
 	public void setBattery(Battery battery) {
 		this.bat = battery;
-	} // 추후 배터리를 새로 교체 할수 있는 기능이 잇습니다.
+	}// 추후 배터리를 새로 교체할 수 있는 기능이 있습니다.
 }

@@ -9,4 +9,5 @@ public class ChargeBattery implements Battery{
 	public void charge(int value) {
 		
 	}
+
 }

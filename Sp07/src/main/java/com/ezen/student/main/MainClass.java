@@ -48,7 +48,7 @@ public class MainClass {
 		// sos 로 한명검색
 		
 		EMSInformationService eis
-		=ctx.getBean("informationServiece",EMSInformationService.class );
+		=ctx.getBean("informationService",EMSInformationService.class );
 		eis.outputEMSInformation();
 	
 	   ctx.close();

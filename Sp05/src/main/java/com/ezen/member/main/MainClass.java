@@ -12,7 +12,7 @@ import com.ezen.member.dto.Student;
 public class MainClass {
 
 	public static void main(String[] args) {
-		String[] sNums={"H39asdfaelu42o23","H39iiemamca8w9h4","H39lkmn754fghia7", 
+		String[] sNums = {"H39asdfaelu42o23","H39iiemamca8w9h4","H39lkmn754fghia7", 
 			"H39plo865cuy8k92", "H39mnbviiaed89q1", "H399omjjyv56t3d5", 
 			"H39lczaqwg644gj8", "H39ymbcsh74thgh2", "H39lesvj7544vf89"};
 				
@@ -44,11 +44,11 @@ public class MainClass {
 		
 		StudentAssembler assembler = new StudentAssembler();
 		StudentInsertService is = assembler.getIs();
-		// is.insertStudent(std);
+		 //is.insertStudent(std);
 		for (int i = 0; i < sNums.length; i++) {
 			Student std1 = new Student(sNums[i], sIds[i], sPws[i], 
 					sNames[i], sAges[i], sGenders[i], sMajors[i]);
-			// is.insertStudent(std1);
+			//is.insertStudent(std1);
 		}
 		
 		StudentSelectService ss = assembler.getSs();
