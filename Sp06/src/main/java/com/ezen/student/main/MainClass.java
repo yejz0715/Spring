@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
+import com.ezen.student.dto.EMSInformationService;
 import com.ezen.student.dto.Student;
 import com.ezen.student.service.InsertService;
 import com.ezen.student.service.SelectAllService;
@@ -32,9 +33,15 @@ public class MainClass {
 		}
 		
 		
-		UpdateService us	= ctx.getBean("updateService", UpdateService.class);
+		UpdateService us= ctx.getBean("updateService", UpdateService.class);
 		// us 로 수정
-		SelectOneService sos	= ctx.getBean("selectOneService", SelectOneService.class);
+		SelectOneService sos= ctx.getBean("selectOneService", SelectOneService.class);
 		// sos 로 한명검색
+		
+		EMSInformationService eis
+		=ctx.getBean("informationServiece",EMSInformationService.class );
+		eis.outputEMSInformation();
+	
+	   ctx.close();
 	}
 }

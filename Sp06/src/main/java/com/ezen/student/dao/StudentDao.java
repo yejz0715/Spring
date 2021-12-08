@@ -7,15 +7,23 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.ezen.student.dto.DataBaseConnectionInfo;
 import com.ezen.student.dto.Student;
 
 
 	
 public class StudentDao {
-	String driver = "oracle.jdbc.driver.OracleDriver";
-	String url = "jdbc:oracle:thin:@localhost:1521:xe" ;
-	String id = "scott";
-	String pw = "tiger";
+	String driver = null;
+	String url = null ;
+	String id = null;
+	String pw = null; //값은 생성자에 넣어줘야함
+	
+	public StudentDao(DataBaseConnectionInfo dbconinfo) {
+		this.driver = dbconinfo.getDriver();
+		this.url = dbconinfo.getJdbcUrl();
+		this.id = dbconinfo.getUserId();
+		this.pw = dbconinfo.getUserPw();
+	}
 	Connection con = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
